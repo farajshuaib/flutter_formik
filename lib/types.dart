@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
     * It will be called with the following parameters:
     * payload: The payload of the form
 */
-typedef Submitter = Function(Map<String, dynamic> payload, Map<String, dynamic> errors);
+typedef Submitter = Function(
+    Map<String, dynamic> payload, Map<String, dynamic> errors);
 
 /*
     * This is the callback that will be passed to the child widget

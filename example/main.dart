@@ -30,8 +30,12 @@ class Demo extends StatelessWidget {
             'password': '',
           },
           validationSchema: {
-            'email': ValidationBuilder().required('Email is required').email('Email is not valid'),
-            'password': ValidationBuilder().required('Password is required').minLength(6, 'Password must be at least 6 characters'),
+            'email': ValidationBuilder()
+                .required('Email is required')
+                .email('Email is not valid'),
+            'password': ValidationBuilder()
+                .required('Password is required')
+                .minLength(6, 'Password must be at least 6 characters'),
           },
           onSubmit: (payload, errors) {
             if (errors.isNotEmpty) {
@@ -46,7 +50,8 @@ class Demo extends StatelessWidget {
             // Send user object to your business logic
             // ...
           },
-          child: (values, isValid, handleSubmit, handleReset, handleChange, errors) {
+          child: (values, isValid, handleSubmit, handleReset, handleChange,
+              errors) {
             return Column(
               children: <Widget>[
                 TextField(

@@ -1,7 +1,6 @@
 name: flutter_formik
 description: "A form management library for Flutter inspired by React Formik."
 version: 1.0.0
-author: Your Name
 homepage: https://github.com/farajshuaib/flutter_formik
 repository: https://github.com/farajshuaib/flutter_formik
 

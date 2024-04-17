@@ -21,7 +21,7 @@ import 'package:form_validator/form_validator.dart';
 
 class Formik extends StatefulWidget {
   final Map<String, dynamic> initialValues;
-  Map<String, ValidationBuilder> validationSchema;
+  final Map<String, ValidationBuilder> validationSchema;
   final Submitter onSubmit;
   final ChildCallback child;
   final bool enableReinitialize;
@@ -29,7 +29,7 @@ class Formik extends StatefulWidget {
   final bool validateOnMount;
   final Map<String, String> initialErrors;
 
-  Formik(
+  const Formik(
       {required this.initialValues,
       required this.validationSchema,
       required this.onSubmit,
@@ -38,7 +38,7 @@ class Formik extends StatefulWidget {
       this.validateOnChange = false,
       this.validateOnMount = false,
       this.initialErrors = const {},
-      super.key}) {}
+      super.key});
 
   @override
   State<Formik> createState() => _FormikState();
